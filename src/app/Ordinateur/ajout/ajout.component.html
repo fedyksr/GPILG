@@ -1,0 +1,82 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h3> Ajout Ordinateur</h3>
+    </div>
+    <div class="card-body">
+      <form>
+        <div class="row g-3">
+          <div class="col-sm">
+            <input type="text" class="form-control" placeholder="Nom Ordinateur" aria-label="Nom Ordinateur" [(ngModel)]="ordinateur.nomOrdinateur"[ngModelOptions]="{standalone: true}">
+          </div>
+          <div class="col-sm">
+            <input type="text" class="form-control" placeholder="Addresse IP" aria-label="AddressIP" [(ngModel)]="ordinateur.addressIP"[ngModelOptions]="{standalone: true}">
+          </div>
+          <div class="col-sm">
+            <input type="text" class="form-control" placeholder="Addresse MAC" aria-label="AddressMAC" [(ngModel)]="ordinateur.addressMAC"[ngModelOptions]="{standalone: true}">
+          </div>
+        </div>
+        <br>
+        <div class="row g-3">
+          <div class="col-sm">
+            <input type="text" class="form-control" placeholder="RAM" aria-label="RAM" [(ngModel)]="ordinateur.ram"[ngModelOptions]="{standalone: true}">
+          </div>
+          <div class="col-sm">
+            <input type="text" class="form-control" placeholder="CPU" aria-label="CPU" [(ngModel)]="ordinateur.cpu"[ngModelOptions]="{standalone: true}">
+          </div>
+          <div class="col-sm">
+            <input type="text" class="form-control" placeholder="Type" aria-label="Type" [(ngModel)]="ordinateur.type"[ngModelOptions]="{standalone: true}">
+          </div>
+        </div>
+        <br>
+        <div class="row g-3">
+          <div class="col-sm">
+            <input type="text" class="form-control" placeholder="Marque" aria-label="Marque" [(ngModel)]="ordinateur.marque"[ngModelOptions]="{standalone: true}">
+          </div>
+          <div class="col-sm">
+            <input type="text" class="form-control" placeholder="Systeme d'exploitation" aria-label="OS" [(ngModel)]="ordinateur.os"[ngModelOptions]="{standalone: true}">
+          </div>
+          <div class="col-sm">
+            <input type="datetime-local" class="form-control" placeholder="Date Ajout" aria-label="DateAjout" [(ngModel)]="ordinateur.dateAjout"[ngModelOptions]="{standalone: true}">
+          </div>
+        </div>
+        <br>
+        <div class="row g-2">
+          <div class="col-sm">
+            <select class="form-select" size="1" aria-label="size 2 select example" [(ngModel)]="ordinateur.raid"[ngModelOptions]="{standalone: true}">
+              <option value="null" selected>Raid</option>
+              <option value="true">Oui</option>
+              <option value="false">Non</option>
+            </select>
+          </div>
+          <div class="col-sm">
+            <select class="form-select" size="1" aria-label="size 2 select example"[(ngModel)]="ordinateur.actif"[ngModelOptions]="{standalone: true}">
+              <option value="null" selected>Actif</option>
+              <option value="true">Oui</option>
+              <option value="false">Non</option>
+            </select>
+          </div>
+          <div class="col-sm">
+            <select class="form-select" size="1" aria-label="size 2 select example"[(ngModel)]="ordinateur.lecteurCD"[ngModelOptions]="{standalone: true}">
+              <option value="null" selected>LecteurCD</option>
+              <option value="true">Oui</option>
+              <option value="false">Non</option>
+            </select>
+          </div>
+          <div class="col-sm">
+            <select class="form-select" size="1" aria-label="size 2 select example"[(ngModel)]="ordinateur.lecteurDVD"[ngModelOptions]="{standalone: true}">
+              <option value="null" selected>LecteurDVD</option>
+              <option value="true">Oui</option>
+              <option value="false">Non</option>
+            </select>
+          </div>
+        </div>
+        <br>
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+          <button (click)="onSubmit()" type="submit" class="btn btn-success">Ajouter</button>
+          <button type="reset" class="btn btn-danger">Annuler</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

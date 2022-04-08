@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h3>Ordinateur</h3>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+          <tr class="text-center">
+            <th>ID</th>
+            <th>Nom Ordinateur</th>
+            <th>Address IP</th>
+            <th>Address MAC</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ordinateur of ordinateurs" class="text-center">
+            <td>{{ordinateur.idOrdinateur}}</td>
+            <td>{{ordinateur.nomOrdinateur}}</td>
+            <td>{{ordinateur.addressIP}}</td>
+            <td>{{ordinateur.addressMAC}}</td>
+            <td>
+              <button (click)="Editer(ordinateur)" class="btn btn-warning">editer</button>
+              <button class="btn btn-danger" style="margin-left:10px">delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
